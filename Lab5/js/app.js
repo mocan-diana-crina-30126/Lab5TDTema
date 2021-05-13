@@ -8,6 +8,7 @@ var app = new Vue({
     encodedNrzMarkBits: [],
     encodedRZBits: [],
     encodedBiphaseMarkBits: [],
+    encodedBiphaseSpaceBits: [],
     status: "",
     numberOfBits: 8,
     validateBit: validateBit,
@@ -23,7 +24,7 @@ var app = new Vue({
       this.encodedNrzMarkBits = getNRZMarkEncoding(this.bits);
       this.encodedRZBits = getRZEncoding(this.bits);
       this.encodedBiphaseMarkBits = getBiphaseMarkEncoding(this.bits);
-      
+      this.encodedBiphaseSpaceBits = getBiphaseSpaceEncoding(this.bits);
     },
   },
 });
